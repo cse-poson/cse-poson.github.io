@@ -947,7 +947,8 @@ blockquote::before {
 
 .testimonial-section::before {
   content: "";
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  background-image: url('../images/dharmachakra-gold.svg');
   border-radius: 50%;
   position: absolute;
   top: -100px;
@@ -955,17 +956,28 @@ blockquote::before {
   margin: auto;
   width: 250px;
   height: 250px;
+  animation: spin-right 10s linear 0s infinite forwards;
 }
 
 .testimonial-section::after {
   content: "";
-  background: var(--custom-btn-bg-color);
+  background-image: url('../images/dharmachakra-grayblue.svg');
   border-radius: 50%;
   position: absolute;
   bottom: -110px;
   right: -80px;
   width: 350px;
   height: 350px;
+  animation: spin-right 16s linear 0s infinite reverse;
+}
+
+@keyframes spin-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #testimonial-carousel .carousel-caption {
