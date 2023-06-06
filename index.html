@@ -5168,6 +5168,7 @@
                                       data-id="bfa437d"
                                       data-element_type="widget"
                                       data-widget_type="button.default"
+                                      id="playstore-link1"
                                     >
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
@@ -5205,6 +5206,7 @@
                                       data-id="bfa437d"
                                       data-element_type="widget"
                                       data-widget_type="button.default"
+                                      id="webar-link1"
                                     >
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
@@ -5536,6 +5538,7 @@
                                       data-id="be5a122"
                                       data-element_type="widget"
                                       data-widget_type="button.default"
+                                      id="playstore-link2"
                                     >
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
@@ -5573,6 +5576,7 @@
                                       data-id="be5a122"
                                       data-element_type="widget"
                                       data-widget_type="button.default"
+                                      id="webar-link2"
                                     >
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
@@ -5904,6 +5908,30 @@
         total_instances: "1",
         shortcode_class: "_ps2id",
       };
+    </script>
+    <script>
+      var userAgent = navigator.userAgent || navigator.vendor;
+      if( userAgent.match( /Android/i ) ) {
+        // get all elements with id starting with 'webar-link'
+        var elements = document.querySelectorAll('[id^="webar-link"]');
+        // iterate over all elements
+        for (var i = 0; i < elements.length; i++) {
+          // get the element
+          var element = elements[i];
+          // hide element
+          element.style.display = 'none';
+        }
+      } else {
+        // get all elements with id starting with 'playstore-link'
+        var elements = document.querySelectorAll('[id^="playstore-link"]');
+        // iterate over all elements
+        for (var i = 0; i < elements.length; i++) {
+          // get the element
+          var element = elements[i];
+          // hide element
+          element.style.display = 'none';
+        }
+      }
     </script>
     <script
       src="/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.7.7"
